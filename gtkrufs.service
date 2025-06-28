@@ -1,0 +1,10 @@
+[Unit]
+Description=GTK Recently Used FS
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/gtkrufs -f "${RUNTIME_DIRECTORY}"
+RuntimeDirectory=grufs
+
+[Install]
+WantedBy=default.target
