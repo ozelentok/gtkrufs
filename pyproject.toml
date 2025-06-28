@@ -1,0 +1,31 @@
+[project]
+name = "gtkrufs"
+version = "0.1.0"
+authors = [
+  { name="Oz Elentok", email="oz.elen@gmail.com" },
+]
+description = "Provide access to GTK’s recently used directories by listing them under a virtual filesystem"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+dependencies = [
+  "fuse-python",
+  "inotify_simple",
+]
+
+[project.scripts]
+gtkrufs = "gtkrufs:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.format]
+quote-style = "preserve"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
